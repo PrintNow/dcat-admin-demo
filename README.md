@@ -12,7 +12,6 @@
 
 - PHP >= 8.3
 - Composer
-- Node.js & npm
 - MySQL / PostgreSQL / SQLite
 
 ## 快速开始
@@ -22,23 +21,21 @@
 git clone https://github.com/PrintNow/dcat-admin-demo.git
 cd dcat-admin-demo
 
-# 2. 安装依赖 & 初始化（自动复制 .env、生成 key、迁移数据库、构建前端）
+# 2. 安装依赖 & 初始化（自动复制 .env、生成 key、迁移数据库）
 composer run setup
 
-# 3. 安装 dcat-admin
-composer require printnow/dcat-admin
-
-# 4. 发布资源 & 初始化 admin
+# 3. 发布资源 & 初始化 admin
+php artisan admin:publish
 php artisan admin:install
 
-# 5. 启动开发服务器
-composer run dev
+# 4. 启动开发服务器
+php artisan serve --host=127.0.0.1 --port=8000
 ```
 
-访问 `http://localhost:8000/admin`，默认账号密码：
+访问 `http://localhost:8000/admin` 默认账号密码：
 
-| 账号 | 密码 |
-|------|------|
+| 账号    | 密码    |
+|-------|-------|
 | admin | admin |
 
 ## 相关仓库
