@@ -7,7 +7,6 @@ namespace App\Admin\Actions;
 use Dcat\Admin\Actions\Action;
 use Dcat\Admin\Actions\Response;
 use Dcat\Admin\Admin;
-use Dcat\Admin\Models\HasPermissions;
 use Dcat\Admin\Widgets\Table;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -76,9 +75,7 @@ HTML;
      *
      * @return string|void
      */
-    public function confirm()
-    {
-    }
+    public function confirm() {}
 
     /**
      * 处理响应的HTML字符串，附加到弹窗节点中
@@ -106,7 +103,7 @@ JS;
         $this->addHtmlClass('btn btn-primary');
 
         // 保存弹窗的ID
-        $this->setHtmlAttribute('data-target', '#' . $this->modalId);
+        $this->setHtmlAttribute('data-target', '#'.$this->modalId);
 
         parent::setupHtmlAttributes();
     }
@@ -114,7 +111,7 @@ JS;
     /**
      * 动作权限判断，返回false则表示无权限
      *
-     * @param Model|Authenticatable|HasPermissions|null $user
+     * @param  Model|Authenticatable|null  $user
      */
     protected function authorize($user): bool
     {

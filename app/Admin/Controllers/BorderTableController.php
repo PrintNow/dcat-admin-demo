@@ -55,9 +55,9 @@ class BorderTableController extends Controller
             $grid->disableCreateButton();
 
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->scope(1, admin_trans_field('month'))->where('date', 2019, '<=');
-                $filter->scope(2, admin_trans_label('quarter'))->where('date', 2019, '<=');
-                $filter->scope(3, admin_trans_label('year'))->where('date', 2019, '<=');
+                $filter->scope('1', admin_trans_field('month'))->where('date', 2019, '<=');
+                $filter->scope('2', admin_trans_label('quarter'))->where('date', 2019, '<=');
+                $filter->scope('3', admin_trans_label('year'))->where('date', 2019, '<=');
 
                 $filter->equal('content');
                 $filter->equal('cost');
