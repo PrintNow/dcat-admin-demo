@@ -1,0 +1,9 @@
+parameters:
+    level: 5
+    paths:
+        - app/Admin
+    ignoreErrors:
+        - '#Call to an undefined method#'
+        - '#Access to an undefined property#'
+        - '#Method .+ not found#'
+        - '#Parameter .+ of function .+ expects .+, .+ given#'
