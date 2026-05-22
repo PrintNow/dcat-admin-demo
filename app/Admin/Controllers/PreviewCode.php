@@ -63,7 +63,7 @@ trait PreviewCode
      */
     protected function buildPreviewButton($class = 'btn-white')
     {
-        $previewUrl = '/' . request()->path() . '/preview';
+        $previewUrl = '/'.request()->path().'/preview';
 
         Admin::script(
             <<<SCRIPT
@@ -82,15 +82,11 @@ SCRIPT
         return "<button class='btn {$class} preview-code'> &nbsp;&nbsp;&nbsp;<i class=' fa  fa-code'></i>&nbsp;预览代码&nbsp;&nbsp;&nbsp; </button>&nbsp;";
     }
 
-    /**
-     * @param null $repeat
-     * @return string
-     */
-    protected function newline($repeat = null)
+    protected function newline(?int $repeat = null): string
     {
         $value = '<div style="height:15px"></div>';
 
-        if (!$repeat) {
+        if (! $repeat) {
             return $value;
         }
 

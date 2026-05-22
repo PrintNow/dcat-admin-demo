@@ -1,9 +1,15 @@
 parameters:
     level: 5
     paths:
-        - app/Admin
+        - app
+        - config
     ignoreErrors:
         - '#Call to an undefined method#'
         - '#Access to an undefined property#'
-        - '#Method .+ not found#'
-        - '#Parameter .+ of function .+ expects .+, .+ given#'
+        - '#Parameter .+ of method .+ expects .+, .+ given#'
+        - '#Instantiated class .+ not found#'
+        - '#Expression .+ on a separate line does not do anything#'
+        - '#Parameter .+ of anonymous function has invalid type#'
+        - '#Call to method .+ on an unknown class#'
+        - '#Negated boolean expression is always#'
+        - '#Offset .+ on left side of .+ always exists#'

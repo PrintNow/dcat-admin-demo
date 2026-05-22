@@ -90,6 +90,15 @@
             "php-http/discovery": true
         }
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../dcat-admin",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
     "minimum-stability": "stable",
     "prefer-stable": true
 }
