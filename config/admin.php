@@ -27,7 +27,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Dcat Admin Demo - printnow/dcat-admin',
+    'name' => 'Dcat Admin',
 
     /*
     |--------------------------------------------------------------------------
